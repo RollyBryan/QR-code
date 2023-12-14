@@ -1,0 +1,44 @@
+<?php
+/* session_start(); */
+require "bdd.php";
+/* include"fonction.php"; */
+include"generate.php";
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>generator qr</title>
+</head>
+<body>
+    <h1>🔥ndao hanao qr code 🔥</h1><br>
+    <div class="mach">
+        <form method="post" action="">
+        <label for="nom">nom</label>
+        <input type="text" name="nom" id="nom">
+        <label for="prenom">prenom</label>
+        <input type="text" name="prenom" id="prenom">
+        <label for="poste">poste</label>
+        <input type="text" name="poste" id="poste">
+
+
+        
+        <button type="submit" name="btn" value="qr generate" id="btn" onclick="you()">soumettre</button>
+    </form>
+<div class="qr">
+    <p>votre QR code s'affichera ici 😊</p>
+    <?php
+    echo "<img src='".$qrcode."'>";
+    ?>
+</div>
+<!-- <div class="za">
+    <p>Votre QR code s'affichera ici</p>
+</div> -->
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
