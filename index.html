@@ -32,7 +32,8 @@ include"generate.php";
 <div class="qr">
     <p>votre QR code s'affichera ici 😊</p>
     <?php
-    echo "<img src='".$qrcode."'>";
+    if(!empty($qrnom)&&!empty($qrprenom)&&!empty($qrposte)) {
+    echo "<img src='".$qrcode."'>";}
     ?>
 </div>
 <!-- <div class="za">
